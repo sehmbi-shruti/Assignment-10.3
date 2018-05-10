@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Link</title>
+    </head>
+    <body>
+
+        <a id="wiki" target="_self" href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>
+        <br>
+        <p><button id="b1" onclick="showAtt()">Show Attributes</button>
+        
+        <button id="b2" onclick="removeAtt()">Remove Result</button>
+        </p>
+        <div id="attrs"></div>
+        <script>
+        function showAtt()
+        {
+        var id = document.getElementById("wiki").id;
+        var target = document.getElementById("wiki").target;
+        var href = document.getElementById("wiki").href;
+        document.getElementById("attrs").innerHTML = "Attributes for <a> tag : ID = " + id + " Target = " + target + " HREF = " + href;
+        }
+        function removeAtt()
+        {
+        document.getElementById("attrs").remove();
+        }
+        </script>
+    </body>
+</html>
